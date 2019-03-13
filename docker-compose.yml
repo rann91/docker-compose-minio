@@ -6,9 +6,10 @@ services:
     image: minio/minio:RELEASE.2019-03-06T22-47-10Z
     restart: always
     volumes:
-      - data:/data
+      - data:/data:delegated
     environment:
       - VIRTUAL_HOST=${VIRTUAL_HOST}
+      - VIRTUAL_PORT=9000
       - MINIO_ACCESS_KEY=${MINIO_ACCESS_KEY}
       - MINIO_SECRET_KEY=${MINIO_SECRET_KEY}
     command: server /data

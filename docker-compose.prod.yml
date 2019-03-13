@@ -6,4 +6,3 @@ services:
       - VIRTUAL_HOST=${VIRTUAL_HOST},www.${VIRTUAL_HOST}
       - LETSENCRYPT_HOST=${VIRTUAL_HOST}, www.${VIRTUAL_HOST}
       - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
-    command: server --address ":443" /data
