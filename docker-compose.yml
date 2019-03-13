@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+  server:
+    container_name: server
+    image: minio/minio:RELEASE.2019-03-06T22-47-10Z
+    restart: always
+    volumes:
+      - ./data/data:/data
+      - ./data/config:/root/.minio
+    environment:
+      - VIRTUAL_HOST=${VIRTUAL_HOST}
+      - MINIO_ACCESS_KEY=${MINIO_ACCESS_KEY}
+      - MINIO_SECRET_KEY=${MINIO_SECRET_KEY}
+    command: server /data
+
+networks:
+  default:
+    external:
+      name: nginx-proxy
