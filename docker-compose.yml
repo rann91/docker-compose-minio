@@ -6,13 +6,15 @@ services:
     image: minio/minio:RELEASE.2019-03-06T22-47-10Z
     restart: always
     volumes:
-      - ./data/data:/data
-      - ./data/config:/root/.minio
+      - data:/data
     environment:
       - VIRTUAL_HOST=${VIRTUAL_HOST}
       - MINIO_ACCESS_KEY=${MINIO_ACCESS_KEY}
       - MINIO_SECRET_KEY=${MINIO_SECRET_KEY}
     command: server /data
+
+volumes:
+  data:
 
 networks:
   default:
