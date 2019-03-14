@@ -8,10 +8,10 @@ services:
     volumes:
       - data:/data:delegated
     environment:
-      - VIRTUAL_HOST=${VIRTUAL_HOST}
+      - VIRTUAL_HOST
       - VIRTUAL_PORT=9000
-      - MINIO_ACCESS_KEY=${MINIO_ACCESS_KEY}
-      - MINIO_SECRET_KEY=${MINIO_SECRET_KEY}
+      - MINIO_ACCESS_KEY
+      - MINIO_SECRET_KEY
     command: server /data
 
 volumes:
