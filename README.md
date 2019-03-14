@@ -7,7 +7,7 @@ Copy default .env file and configure variables. Then simply run docker-compose:
 docker-compose up -d
 ```
 
-To enable SSL, run the following command:
+To enable HTTPS, run the following command:
 ```
 docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
 ```
