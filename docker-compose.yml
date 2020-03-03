@@ -5,7 +5,7 @@ services:
     container_name: ${COMPOSE_PROJECT_NAME}_client
     image: minio/mc
     entrypoint:
-      - /bin/sh -c minio/mc
+      - /bin/sh -c mc
     environment:
       - MINIO_ACCESS_KEY
       - MINIO_SECRET_KEY
