@@ -20,7 +20,6 @@ services:
     environment:
       - VIRTUAL_HOST
       - VIRTUAL_PORT=9000
-      - VIRTUAL_PROTO=https
       - MINIO_ACCESS_KEY
       - MINIO_SECRET_KEY
     command: server /data
