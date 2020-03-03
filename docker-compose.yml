@@ -16,13 +16,13 @@ services:
     volumes:
       - data:/data
     expose:
-      - 80
-      - 443
+      - 9000
     environment:
       - VIRTUAL_HOST
+      - VIRTUAL_PORT=9000
       - MINIO_ACCESS_KEY
       - MINIO_SECRET_KEY
-    command: server --address ":80" /data
+    command: server /data
 
 volumes:
   data:
