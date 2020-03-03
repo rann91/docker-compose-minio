@@ -3,6 +3,6 @@ version: "3"
 services:
   server:
     environment:
-      - VIRTUAL_HOST=${VIRTUAL_HOST},www.${VIRTUAL_HOST}
-      - LETSENCRYPT_HOST=${VIRTUAL_HOST}, www.${VIRTUAL_HOST}
+      - VIRTUAL_HOST=${VIRTUAL_HOST}
+      - LETSENCRYPT_HOST=${VIRTUAL_HOST}
       - LETSENCRYPT_EMAIL
