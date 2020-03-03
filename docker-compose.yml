@@ -4,9 +4,6 @@ services:
   client:
     container_name: ${COMPOSE_PROJECT_NAME}_client
     image: minio/mc
-    entrypoint: mc config host add minio http://server:9000 $MINIO_ACCESS_KEY $MINIO_SECRET_KEY
-    depends_on:
-      - server
     environment:
       - MINIO_ACCESS_KEY
       - MINIO_SECRET_KEY
