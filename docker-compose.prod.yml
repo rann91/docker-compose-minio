@@ -4,8 +4,5 @@ services:
   server:
     environment:
       - VIRTUAL_HOST=${VIRTUAL_HOST}
-      - VIRTUAL_PROTO=https
-      - VIRTUAL_PORT=443
       - LETSENCRYPT_HOST=${VIRTUAL_HOST}
       - LETSENCRYPT_EMAIL
-    command: server --address ":443" /data
